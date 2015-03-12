@@ -154,4 +154,17 @@ global class MapUtils {
         }
         return returnValue;
     }
+    
+    global static Map<String,String> quotedValues(Map<String,String> theMap){
+        final Map<String,String> returnValue = null;
+        if(theMap != null){
+            returnValue = new Map<String,String>();
+            if(theMap.size() > 0){
+                for(String key : theMap.keySet()){
+                    returnValue.put(key, '\'' + theMap.get(key) + '\'');
+                }
+            }
+        }
+        return returnValue;
+    }
 }
