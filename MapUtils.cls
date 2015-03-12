@@ -161,7 +161,7 @@ global class MapUtils {
             returnValue = new Map<String,String>();
             if(theMap.size() > 0){
                 for(String key : theMap.keySet()){
-                    returnValue.put(key, '\'' + theMap.get(key) + '\'');
+                    returnValue.put(key, '\'' + String.escapeSingleQuotes(theMap.get(key)) + '\'');
                 }
             }
         }
